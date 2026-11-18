@@ -1,0 +1,170 @@
+:root {
+    color-scheme: light;
+    --green: #23845a;
+    --green-dark: #176844;
+    --green-soft: #eaf6ef;
+    --green-focus: #70bd91;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #233044;
+    background: #eaf5ee;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: min(100% - 2rem, 720px);
+    min-height: 300px;
+    margin: clamp(1rem, 8vh, 4rem) auto;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border: 1px solid #d7e8dc;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgb(35 48 68 / 10%);
+}
+
+h1 {
+    margin: 0 0 0.75rem;
+    color: var(--green-dark);
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e1ece4;
+    color: #365646;
+    font-size: 1.2rem;
+}
+
+p {
+    color: #59677b;
+    line-height: 1.6;
+}
+
+ol,
+ul {
+    padding-left: 1.5rem;
+}
+
+ol li,
+ul li {
+    margin: 0.65rem 0;
+}
+
+a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--green-dark);
+}
+
+input {
+    width: min(100%, 340px);
+    min-height: 44px;
+    margin: 0.25rem 0.5rem 0.5rem 0;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #c9d9ce;
+    border-radius: 9px;
+    background: #fbfefc;
+    color: inherit;
+    font: inherit;
+}
+
+input:focus {
+    border-color: var(--green);
+    outline: 3px solid rgb(35 132 90 / 18%);
+}
+
+button {
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 9px;
+    background: var(--green);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+    background: var(--green-dark);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--green-focus);
+    outline-offset: 3px;
+}
+
+ul li {
+    padding: 0.65rem 0.75rem;
+    border-radius: 8px;
+    background: var(--green-soft);
+}
+
+label {
+    display: block;
+    margin: 0.75rem 0 0.25rem;
+    color: #365646;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th,
+td {
+    padding: 0.7rem;
+    border-bottom: 1px solid #e1ece4;
+    text-align: left;
+}
+
+th {
+    background: var(--green-soft);
+    color: var(--green-dark);
+}
+
+p:empty {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    body {
+        width: min(100% - 1rem, 720px);
+        margin: 0.5rem auto;
+        padding: 1.25rem;
+        border-radius: 14px;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
